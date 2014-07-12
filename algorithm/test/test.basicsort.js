@@ -31,3 +31,20 @@ describe("basicSorting.InsertionSort", function(){
 		console.log("Insertion Sort Result is "+ sortResult);	
 	})
 })
+
+describe("basicSorting.ShellSort", function(){
+	var randomArray = basicSorting.getRandomArray(20,1,100);
+	var gaps = [13,4,1];		//3x+1 implementations 4=3*1+; 13=3*4+13
+	it("ShellSort of Random Array "+ randomArray +" with gaps "+ gaps, function(){
+		var sortResult = basicSorting.shellSort(randomArray,gaps);
+		assert.equal(true, basicSorting.isSorted(sortResult));
+		console.log("ShellSort Sort Result is "+ sortResult);	
+	})
+
+	gaps = [19,5,1]; //SedgeWick 
+	it("ShellSort of Random Array "+ randomArray +" with gaps "+ gaps, function(){
+		var sortResult = basicSorting.shellSort(randomArray,gaps);
+		assert.equal(true, basicSorting.isSorted(sortResult));
+		console.log("ShellSort Sort Result is "+ sortResult);	
+	})
+})

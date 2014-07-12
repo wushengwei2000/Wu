@@ -20,7 +20,7 @@ BasicSorting.prototype.isSorted = function(array) {
 
 //********** Selection Sort *********
 //	Data Structure: 	Array[N]
-//	Algorithm: 			Interate Array to locate Array[min], swap with beginning of the interator 
+//	Algorithm: 		Interate Array to locate Array[min], swap with beginning of the interator 
 //	Cost: 				
 //***********************************
 BasicSorting.prototype.selectionSort = function(data) {
@@ -45,7 +45,7 @@ BasicSorting.prototype.selectionSort = function(data) {
 
 //********** Insertion Sort *********
 //	Data Structure: 	Array[N]
-//	Algorithm: 			Interate the array and compare current pos val vs pos<current pos, swap value if current val is smaller
+//	Algorithm: 		Interate the array and compare current pos val vs pos<current pos, swap value if current val is smaller
 //	Cost: 				
 //***********************************
 BasicSorting.prototype.insertionSort = function(data) {
@@ -65,8 +65,35 @@ BasicSorting.prototype.insertionSort = function(data) {
 	return data;
 };
 
-
-
+//********** Shell Sort *********
+//	Data Structure: 	Array[N] with Step f(h)
+//	Algorithm: 		Similar to Insertion Sort except instead of comparing vs pos before, it compares/swap with val[i-h]
+//	Cost: 				
+//***********************************
+BasicSorting.prototype.shellSort = function(data,h) {
+	var size = data.length;
+	h.forEach(function(step){
+		for(var i=step; i<data.length; i++){
+			for(var j=i; j>=0; j-=step){
+				if(data[j]<data[j-step]){
+					var tmp = data[j];
+					data[j] = data[j-step];
+					data[j-step] = tmp;
+				}
+			}
+		}
+	})
+	return data;
+};
 
 
 module.exports = new BasicSorting();
+
+
+
+
+
+
+
+
+
