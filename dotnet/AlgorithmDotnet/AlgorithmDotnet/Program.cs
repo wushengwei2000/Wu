@@ -10,7 +10,7 @@ namespace AlgorithmDotnet
     {
         static void Main(string[] args)
         {
-            TestDijksStraAlgorithm();
+            Permutations.TestPermutate2();
         }
 
         public static void TestDijksStraAlgorithm()

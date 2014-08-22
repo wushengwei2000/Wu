@@ -45,10 +45,12 @@
     <Compile Include="BST.cs" />
     <Compile Include="DijkstraAlgorithm.cs" />
     <Compile Include="HeapSort.cs" />
+    <Compile Include="Permutations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuickSort.cs" />
     <Compile Include="Sortings.cs" />
+    <Compile Include="TravellingSalesMan.cs" />
     <Compile Include="WhosTheBOSS.cs" />
   </ItemGroup>
   <ItemGroup>

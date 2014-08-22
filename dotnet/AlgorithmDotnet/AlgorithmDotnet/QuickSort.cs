@@ -107,10 +107,23 @@ namespace AlgorithmDotnet
             return input;
         }
 
-        public static IList<int> PopulateRandomInts(int size, int min, int max)
+        public static IList<int> PopulateRandomInts(int size, int min, int max, bool allowDupliate=true)
         {
             var random = new Random();
-            return Enumerable.Range(1, size).Select(item => random.Next(min, max)).ToList();
+            if(allowDupliate || size>=(max-min))
+                return Enumerable.Range(1, size).Select(item => random.Next(min, max)).ToList();
+            else
+            {
+                IList<int> result = new List<int>();
+                for (int i = 0; i < size; i++)
+                {
+                    var randNumb = random.Next(min, max);
+                    while (result.Contains(randNumb))
+                        randNumb = random.Next(min, max);
+                    result.Add(randNumb);
+                }
+                return result;
+            }
         }
 
         public static void PrintSequence<T>(T[] input)
