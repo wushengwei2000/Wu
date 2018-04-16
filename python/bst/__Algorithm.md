@@ -1,27 +1,27 @@
 # Graph Problem
 
 ## Representations
-1. Adjacent List
-1. Adjacent Matrix
+  1. Adjacent List
+  1. Adjacent Matrix
+  1. Simple Array of parent index (`Union Find` Representation)
 
 ## Categories
-|							| Undirected										| Directed 											|
-|:----------- |: ------------ 								|:------------									|
-|Unweighted		|	Connected Components				 	|	Topology Sort									|
-|							|																|	Cycle Detections							|
-|							|																|	Strongly Connected Components	|
-|Weighted			|	Prims Algorithm								|	Shoreted Path Problem					|
-|							|	MSP														|																|
-|							|																|																|
+  
+  |Weight	| Undirected	|Directed	|
+  |:----------- |:------------	|:------------	|
+  |Unweighted   | Connected Components 		|Topology Sort	|
+  |	      	|Cycle Detections      		| 	    	| 	
+  |	      	|Strongly Connected Components	|	    	|
+  |Weighted 	|Prims Algorithm 		|Shoreted Path Problem	|
+  |		|MSP				|			|
 
 ### Topology Sort Problem and Algorithm 
 
-
 ### Connected / Strongly Connected Component Problem
-	1. DFS / BFS implementation 
-	1. Kosaraju Algorithm 
-		2. Compute topological sort of the reverse Diagraph
-		2. Loop through the order and compute the strongly connected components
+1. DFS / BFS implementation 
+1. Kosaraju Algorithm 
+  * Compute topological sort of the reverse Diagraph
+  * Loop through the order and compute the strongly connected components
 
 ### Shortest Path Algorithm 
 	1. Dijkstra's Algorithm (Non Negative Weight)
@@ -45,9 +45,9 @@
 	1. Bellman-Ford Algorithm
 
 ### Mininum Cut Problem (Find a cut to minimize the capactiy)
-	#### Theory
-		Maxflow === Sum (Mincut Edge Capacity(weight)) 
-	#### Algorithm:
+#### Theory
+	Maxflow === Sum (Mincut Edge Capacity(weight)) 
+#### Algorithm:
 	1. Fort-Fulkerson algorithm
 		How to find augmented path:
 			- Has forward capacity remaining 
@@ -57,9 +57,6 @@
 	1. How to implement Fort-Fulkerson Algorithm
 		2. Graph ===> Residue Graph
 		2. Perform DFS or BFS on the residue graph
-
-
-
 #### Application
 	1. Path finding, Navigation 
 	1. Parallel Scheduling Problem
@@ -68,25 +65,24 @@
 		>  
 
 # Generic Algorithm Philosiphy
-## Dynamic Programming 
+### Dynamic Programming 
 	Break down large problem into smaller pieces, solving small problem and memorize the results to optimize the algorithm
 	Guaranteed to be optimal solution
 	e.g. DFS is considered as Dynamic Programming
 		Actually most of the recursive algorithm are based on the concept of dynamic programming
-
-## Greedy Programming 
+### Greedy Programming 
 	Find local optimal solution hopefully that you can find the global optimal solution
 	Does not really guarantee optimal solution
 	e.g. Minimum Spanning Tree 
 		Prim Algorithm
-
-## Reduction / Induction 
-
-## Divide and Conquer and Combine 
+### Reduction / Induction 
+### Divide and Conquer and Combine 
 	- Divide n -> 1 + (n-1) (N2)
 	- Divide n -> n/2 + n/2 (lg(N)); Think about using this instead
 
 
+```
+TODO
 # All the problem can be solved by 
 # 	- Reduction: universal -> contextual 
 #		- Induction: contextual -> universal 
@@ -116,15 +112,11 @@
 
 # How to implement a Tri Diagraph
 
-
-
-
-
-
 # Sorting 
 # 	Insertion Sort
 # 	Selection Sort 
 
 
 # Data Strucutre 
-# 	
+# 
+```
