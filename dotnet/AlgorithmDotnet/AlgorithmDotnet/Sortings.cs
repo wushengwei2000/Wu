@@ -40,7 +40,7 @@ namespace AlgorithmDotnet
 
     public class BubbleSort
     {
-        
+        //Swap Adjacent Ones until the array is sorted 
     }
 
     public class MergeSort

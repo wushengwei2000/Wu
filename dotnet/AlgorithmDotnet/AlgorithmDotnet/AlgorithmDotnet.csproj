@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Amazon.cs" />
+    <Compile Include="BitManipulation.cs" />
     <Compile Include="BST.cs" />
     <Compile Include="DijkstraAlgorithm.cs" />
     <Compile Include="HeapSort.cs" />

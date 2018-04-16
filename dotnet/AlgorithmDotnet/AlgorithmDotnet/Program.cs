@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,8 @@ namespace AlgorithmDotnet
     {
         static void Main(string[] args)
         {
-            Permutations.TestPermutate2();
+            BitManipulation.TestBitOperations();
+            Console.ReadLine();
         }
 
         public static void TestDijksStraAlgorithm()

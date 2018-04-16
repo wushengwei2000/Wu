@@ -54,6 +54,7 @@ namespace AlgorithmDotnet
             var duplicateChecker = new HashSet<T>();    //For handling Duplication case 
             for (int i = startIndex; i < input.Count; i++)
             {
+                if(!duplicateChecker.Add(input[i]))
                 Swap(input, startIndex, i);
                 IList<T> onePermutationResult = new List<T>(input);     
                 Permutate(onePermutationResult, startIndex+1, permutatedResult);
